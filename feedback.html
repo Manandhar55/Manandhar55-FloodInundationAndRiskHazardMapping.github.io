@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team दृष्टिकोण - Feedback</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome Icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+      
+        /* Feedback Section Styling */
+        .feedback-section {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .feedback-section h1 {
+            font-size: 2.5rem;
+            color: #333; /* Darker tone for professional feel */
+            margin-bottom: 20px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .feedback-section p {
+            font-size: 1.2rem;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #555; /* Subtle gray for text */
+        }
+
+        .feedback-form h2 {
+            font-size: 1.8rem;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        label {
+            font-size: 1rem;
+            font-weight: bold;
+            margin-bottom: 8px;
+            display: block;
+            color: #333;
+        }
+
+        /* Form Input Styling */
+        .feedback-form input[type="text"],
+        .feedback-form input[type="email"],
+        .feedback-form select,
+        .feedback-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            color: #333;
+            transition: border 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feedback-form input[type="text"]:focus,
+        .feedback-form input[type="email"]:focus,
+        .feedback-form select:focus,
+        .feedback-form textarea:focus {
+            border-color: #495057; /* Dark gray border */
+            box-shadow: 0 0 10px rgba(73, 80, 87, 0.5);
+        }
+
+        /* Textarea */
+        .feedback-form textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        /* Submit Button Styling */
+        .feedback-form button {
+            width: 100%;
+            padding: 15px;
+            background-color: #6c757d; /* Neutral gray color */
+            color: white;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .feedback-form button:hover {
+            background-color: #5a6268; /* Slightly darker gray on hover */
+            transform: translateY(-2px);
+        }
+
+        .feedback-form button:active {
+            transform: translateY(2px);
+        }
+
+       
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .feedback-form {
+                width: 90%;
+                padding: 20px;
+            }
+
+            .feedback-section h1 {
+                font-size: 2rem;
+            }
+
+            .feedback-form button {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <a href="index.html" class="logo">Team दृष्टिकोण</a>
+        <nav class="top-right-nav">
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                <li><a href="download.html"><i class="fas fa-cloud-download-alt"></i> Download</a></li>
+                <li><a href="feedback.html"><i class="fas fa-phone"></i> Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="feedback-section">
+            <h1>Provide Your Feedback</h1>
+            <p>Your feedback is valuable to us. Please let us know your thoughts or suggestions!</p>
+
+            <form class="feedback-form">
+                <h2>Feedback Form</h2>
+
+                <!-- Name Field -->
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <!-- Email Field -->
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <!-- Feedback Type -->
+                <label for="feedback-type">Type of Feedback</label>
+                <select id="feedback-type" name="feedback-type" required>
+                    <option value="suggestion">Suggestion</option>
+                    <option value="question">Question</option>
+                    <option value="complaint">Complaint</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <!-- Feedback Message -->
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" placeholder="Write your feedback here..." required></textarea>
+
+                <!-- Submit Button -->
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 दृष्टिकोण. All rights reserved.</p>
+    </footer>
+</body>
+</html>

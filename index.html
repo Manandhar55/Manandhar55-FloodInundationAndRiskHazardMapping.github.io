@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>दृष्टिकोण - Flood Hazard Map</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <!-- Font Awesome Icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+    <style>
+        /* Modal Styles */
+        #popupModal {
+            display: none; /* Hidden by default */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+        }
+        #popupModalContent {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 80%;
+            max-height: 80%;
+            overflow: auto;
+        }
+        #popupModalContent img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .close-modal {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 20px;
+            color: #333;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <a href="index.html" class="logo">Team दृष्टिकोण</a>
+        <nav class="top-right-nav">
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                <li><a href="download.html"><i class="fas fa-cloud-download-alt"></i> Download</a></li>
+                <li><a href="feedback.html"><i class="fas fa-phone"></i> Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="map-section">
+            <div class="map-container">
+                <div id="map"></div>
+                <!-- Legend Section -->
+                <div id="legend" class="legend">
+                    <h3>Flood Hazard Legend</h3>
+                    <div class="legend-item">
+                        <a href="#" onclick="showPopup('img/flood report/Flood of 2 years return period.jpg')">
+                            <span class="legend-label">1. Flood Map of 2-Year Return Period</span>
+                        </a>
+                    </div>
+                    <div class="legend-item">
+                        <a href="#" onclick="showPopup('img/flood report/Flood of 5 years return period.jpg')">
+                           
+                            <span class="legend-label">2. Flood Map of 5-Year Return Period</span>
+                        </a>
+                    </div>
+                    <div class="legend-item">
+                        <a href="#" onclick="showPopup('img/flood report/Flood of 10 years return period.jpg')">
+                     
+                            <span class="legend-label">3. Flood Map of 10-Year Return Period</span>
+                        </a>
+                    </div>
+                    <div class="legend-item">
+                        <a href="#" onclick="showPopup('img/flood report/Flood of 25 years return period.jpg')">
+                           
+                            <span class="legend-label">4. Flood Map of 25-Year Return Period</span>
+                        </a>
+                    </div>
+                    <div class="legend-item">
+                        <a href="#" onclick="showPopup('img/flood report/Flood of 50 years return period.jpg')">
+                        
+                            <span class="legend-label">5. Flood Map of 50-Year Return Period</span>
+                        </a>
+                    </div>
+                    <div class="legend-item">
+                        <a href="#" onclick="showPopup('img/flood report/Flood of 100 years return period.jpg')">
+                      
+                            <span class="legend-label">6. Flood Map of 100-Year Return Period</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal -->
+    <div id="popupModal">
+        <div id="popupModalContent">
+            <span class="close-modal" onclick="closePopup()">&times;</span>
+            <img id="popupImage" src="" alt="Flood Map">
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 दृष्टिकोण. All rights reserved.</p>
+    </footer>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <!-- Map Initialization Script -->
+    <script src="map.js"></script>
+
+    <!-- Popup JavaScript -->
+    <script>
+        function showPopup(imageUrl) {
+            document.getElementById('popupImage').src = imageUrl;
+            document.getElementById('popupModal').style.display = 'block';
+        }
+
+        function closePopup() {
+            document.getElementById('popupModal').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

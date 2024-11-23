@@ -1,0 +1,335 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* Header */
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #006f98, #00b0d7); /* Gradient effect for a modern, vibrant look */
+    padding: 20px 30px;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+    text-decoration: none; /* Removes underline */
+}
+
+
+header .top-right-nav ul {
+    display: flex;
+    list-style: none;
+}
+
+header .top-right-nav ul li {
+    margin-left: 30px;
+}
+
+header .top-right-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+header .top-right-nav ul li a:hover {
+    color: #ffbf00; /* Golden yellow hover effect */
+    transform: scale(1.05); /* Slightly enlarge the link on hover */
+}
+
+/* Main Content */
+main {
+    padding: 40px 30px;
+    background-color: #ffffff;
+    margin: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* About Us Section Layout */
+.about-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+/* Left Section: Introduction */
+.left-section {
+    flex: 1;
+    padding: 20px;
+    max-width: 60%;
+}
+
+.left-section h1 {
+    font-size: 30px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.left-section p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Right Section: Team Members */
+.right-section {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.right-section h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Container for Team Members */
+.team-members {
+    display: flex;
+    justify-content: center; /* Align images to the center */
+    gap: 20px;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    margin-top: 20px;
+}
+
+/* Individual Team Member Styling */
+.team-member {
+    text-align: center;
+    flex: 0 1 30%; /* Ensures the team members are responsive */
+    margin-bottom: 20px;
+}
+
+/* Team Member Image Styling */
+.team-member img {
+    width: 150px; /* Set width */
+    height: 150px; /* Set height to ensure round shape */
+    border-radius: 50%; /* Round border for circular images */
+    object-fit: cover; /* Ensures the image covers the area without stretching */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow around image */
+}
+
+/* Team Member Text Styling */
+.team-member p {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #004f73;
+    color: white;
+    font-size: 16px;
+    margin-top: 50px;
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header .logo {
+        margin-bottom: 10px;
+    }
+
+    header .top-right-nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    header .top-right-nav ul li {
+        margin: 5px 0;
+    }
+
+    .about-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-section {
+        max-width: 100%;
+    }
+
+    .right-section {
+        max-width: 100%;
+    }
+
+    .team-members {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-member {
+        flex: 1 1 100%; /* Allow full-width for smaller screens */
+    }
+
+    .team-member img {
+        width: 120px; /* Smaller images on mobile */
+        height: 120px;
+    }
+}
+
+/* Info Section (For map-based page) */
+.info-section {
+    width: 300px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.info-section:hover {
+    transform: translateY(-5px);
+}
+
+.info-section h3 {
+    font-size: 22px;
+    color: #004f73;
+    margin-bottom: 10px;
+}
+
+.info-section p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #666;
+}
+
+/* Map Section (For map-based page) */
+.map-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.map-container {
+    flex: 1;
+    height: 500px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    margin-right: 20px;
+    transition: transform 0.3s ease;
+}
+
+.map-container:hover {
+    transform: scale(1.02); /* Zoom effect for interactivity */
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+}
+
+/* Filter Section (For map-based page) */
+.filter-section {
+    margin-top: 30px;
+}
+
+.filter-section label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    color: #004f73;
+}
+
+.filter-section select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    background-color: #fafafa;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.filter-section select:hover {
+    border-color: #004f73;
+}
+
+/* Map container with relative positioning for the legend */
+.map-container {
+    position: relative;
+    height: 500px;
+    border: 2px solid #ccc;
+}
+
+/* Legend styling for right-side positioning */
+.legend {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+.legend h3 {
+    margin: 0 0 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+}
+
+.legend-item {
+    margin-bottom: 5px;
+}
+
+.legend-item a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+.legend-color {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border-radius: 3px;
+    flex-shrink: 0;
+}
+
+.legend-label {
+    font-size: 12px;
+    color: #333;
+}
